@@ -31,7 +31,7 @@ export class AuthService {
       ...user,
       password: this.encrypt(password),
     });
-    if (created.isNew) {
+    if (created) {
       return { message: `Usuário ${created.name} (${created.email}) criado, faça login.` }
     } else {
       throw new HttpException({
