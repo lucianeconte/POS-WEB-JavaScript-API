@@ -19,18 +19,20 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
-    "@nestjs/common": "^5.4.0",
-    "@nestjs/core": "^5.4.0",
+    "@nestjs/common": "^5.7.4",
+    "@nestjs/core": "^5.7.4",
     "@nestjs/jwt": "^0.3.0",
     "@nestjs/mongoose": "^5.2.2",
     "@nestjs/passport": "^5.1.0",
     "mongoose": "^5.4.17",
+    "nodemon": "^1.18.10",
     "passport": "^0.4.0",
     "passport-http-bearer": "^1.0.1",
     "passport-jwt": "^4.0.0",
-    "reflect-metadata": "^0.1.12",
+    "reflect-metadata": "^0.1.13",
     "rimraf": "^2.6.2",
-    "rxjs": "^6.2.2",
+    "rxjs": "^6.4.0",
+    "ts-node": "^7.0.1",
     "typescript": "^3.0.1"
   },
   "devDependencies": {
@@ -47,7 +49,7 @@
     "ts-jest": "^23.1.3",
     "ts-loader": "^4.4.2",
     "ts-node": "^7.0.1",
-    "tsconfig-paths": "^3.5.0",
+    "tsconfig-paths": "^3.8.0",
     "tslint": "5.11.0"
   },
   "jest": {
