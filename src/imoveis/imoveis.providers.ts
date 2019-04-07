@@ -5,6 +5,6 @@ export const imoveisProviders = [
     {
         provide: 'ImoveisModelToken',
         useFactory: (connection: Connection) => connection.model('Imoveis', ImoveisSchema),
-        inject: ['DbConnectionToken']
-    }
-]
+        inject: ['DbConnectionToken'],
+    },
+];

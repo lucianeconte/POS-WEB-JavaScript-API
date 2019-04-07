@@ -1,8 +1,6 @@
 import { Controller, Get, Post, Body, Param, Put, Delete, UseGuards } from '@nestjs/common';
 import { ImoveisService } from './imoveis.service';
-import { CreateImoveisDto } from './dto/create-imoveis.dto';
-import { async } from 'rxjs/internal/scheduler/async';
-import { timingSafeEqual } from 'crypto';
+import { CreateImovelDto } from './dto/create-imoveis.dto';
 import { JwtAuthGuard } from 'src/auth/guards/jwt-auth.guard';
 
 @Controller('imoveis')
@@ -20,13 +18,13 @@ export class ImoveisController {
     }
     @Post()
     @UseGuards(JwtAuthGuard)
-    async create(@Body() imoveis: CreateImoveisDto) {
-        return await this.imoveisService.create(imoveis);
+    async create(@Body() createImovelDto: CreateImovelDto) {
+        return await this.imoveisService.create(createImovelDto);
     }
     @Put(':id')
     @UseGuards(JwtAuthGuard)
-    async update(@Param('id') id: string, @Body() imoveis: CreateImoveisDto){
-        return await this.imoveisService.update(id, imoveis);       
+    async update(@Param('id') id: string, @Body() createImovelDto: CreateImovelDto){
+        return await this.imoveisService.update(id, createImovelDto);       
     }
     @Delete(':id')
     @UseGuards(JwtAuthGuard)

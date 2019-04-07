@@ -1,4 +1,4 @@
-export class CreateImoveisDto {
+export class CreateImovelDto {
     readonly tipo: string;
     readonly descricao: string;
     readonly preco: number;

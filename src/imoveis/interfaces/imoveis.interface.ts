@@ -1,6 +1,6 @@
 import { Document } from "mongoose";
 
-export interface Imoveis extends Document {
+export interface Imovel extends Document {
     tipo: string;
     descricao: string;
     preco: number;
